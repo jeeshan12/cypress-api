@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
-describe('Create posts', function () {
-  it('[POST] Delete Post', function () {
+describe('Delete posts', function () {
+  it(' Delete Post', function () {
     cy.deleteRequest(
       {
         url: '/posts/1',
