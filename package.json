@@ -1,0 +1,25 @@
+{
+  "name": "cypress-api-automation",
+  "version": "1.0.0",
+  "description": "API Automation with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write 'cypress/'",
+    "test": "cypress run"
+  },
+  "keywords": [
+    "Cypress",
+    "API",
+    "Rest",
+    "API",
+    "GraphQL"
+  ],
+  "author": "Mohd Jeeshan",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.1.0",
+    "prettier": "^2.7.1",
+    "randomstring": "^1.2.2",
+    "uuid": "^8.3.2"
+  }
+}
