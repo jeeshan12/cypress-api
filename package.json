@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --write 'cypress/'",
-    "test": "cypress run"
+    "pretest": "node reportsetup.js",
+    "test": "cypress run",
+    "posttest": "npx mochawesome-merge 'cypress/results/*.json' > mochawesome.json && npx marge mochawesome.json",
+    "test:ci": "cypress run"
   },
   "keywords": [
     "Cypress",
@@ -18,6 +21,9 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^10.1.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0",
     "prettier": "^2.7.1",
     "randomstring": "^1.2.2",
     "uuid": "^8.3.2"
