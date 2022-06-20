@@ -157,7 +157,7 @@ Tests can be executed either via command line or from test runner.
 
 1. Run  below command in terminal to run the tests from command line.
     ```
-    npm run test
+    npm run test -- --reporter mochawesome  --reporter-options reportDir="cypress/results",overwrite=false,html=false,json=true
     ```
 2. To run the test with test runner, run the below command and execute the tests that you need to run from the test runner UI.
      ```
@@ -180,7 +180,7 @@ You can run the tests using Docker as well. To do this
 2. Once image is build you can now execute the tests in container by running the below command
 
     ```
-    docker run --rm  <<imageTag>> npm run test
+    docker run --rm  <<imageTag>> npm run test -- --reporter mochawesome  --reporter-options reportDir="cypress/results",overwrite=false,html=false,json=true
     ```
 
 If you want to start the container in intercative mode run the below command
