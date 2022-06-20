@@ -194,4 +194,4 @@ If you want to start the container in intercative mode run the below command
 
 [(Back to top)](#table-of-contents)
 
-**In progress**
+Uses **mochawesome-report-generator** `https://www.npmjs.com/package/mochawesome-report-generator` and **mochawesome** `https://www.npmjs.com/package/mochawesome` for reporting. There is no specific configuration needs to be done at framework level. Report options are handled in `test` scripts in package.json. If you are intersted to do some configuration changes, you can easily do the changes in `test` script command.
