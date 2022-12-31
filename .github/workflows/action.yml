@@ -1,0 +1,23 @@
+
+name: Node.js CI
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Checkout code 
+       uses: actions/checkout@v3
+
+     - name: Set up NodeJs
+       uses: actions/setup-node@v3
+       with:
+          node-version: '16.x'
+          cache: npm
+     - run: npm ci
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+     - name: running tests
+       run: npm run test:ci
+       
