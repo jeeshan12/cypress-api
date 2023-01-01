@@ -1,0 +1,29 @@
+
+name: Running Cypress tests
+on: push
+jobs:
+  buildTest:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Checkout code 
+       uses: actions/checkout@v3
+
+     - name: Set up NodeJs
+       uses: actions/setup-node@v3
+       with:
+          node-version: '16.x'
+          cache: npm
+     - run: npm ci
+       name: installing deps
+     - name: running tests
+       run: npm run test:ci --  --reporter mochawesome --reporter-options reportDir="cypress/results",overwrite=false,html=false,json=true
+     - name: generate reports
+       if: always()
+       run: npm run generatereport
+     - name: Archive Test Results 
+       if: always()
+       uses: actions/upload-artifact@v1
+       with:
+        name: test-results
+        path: ./mochawesome-report
+       
