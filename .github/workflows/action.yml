@@ -27,7 +27,7 @@ jobs:
        if: always()
        run: npm run generatereport
      - name: Archive Test Results 
-       if: always()
+       if: success()
        uses: actions/upload-artifact@v1
        with:
         name: test-results
