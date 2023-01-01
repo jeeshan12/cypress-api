@@ -1,7 +1,6 @@
 site_name: Cypress API Docs
 site_description: 'Cypress API Automation for GraphQL and REST API'
 site_author: 'Mohd Jeeshan'
-repo_url: 'https://github.com/jeeshan12/cypress-api'
 nav:
   - Home: README.md
 theme: 
