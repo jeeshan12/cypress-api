@@ -20,4 +20,10 @@ jobs:
      - name: generate reports
        if: always()
        run: npm run generatereport
+     - name: Archive Test Results 
+       if: always()
+       uses: actions/upload-artifact@v1
+       with:
+        name: test-results
+        path: cypress-api/mochawesome-report
        
