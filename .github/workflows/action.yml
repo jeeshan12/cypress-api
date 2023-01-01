@@ -29,6 +29,7 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     needs: buildTest
+    if: always()
     steps:
       - name: Check out code
         uses: actions/checkout@v2
@@ -36,5 +37,5 @@ jobs:
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CONFIG_FILE: README.md
+          CONFIG_FILE: docs.yml
        
