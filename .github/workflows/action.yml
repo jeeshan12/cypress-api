@@ -17,6 +17,12 @@ jobs:
        name: installing deps
      - name: running tests
        run: npm run test:ci --  --reporter mochawesome --reporter-options reportDir="cypress/results",overwrite=false,html=false,json=true
+     - name: Archive screenshots
+       if: failure()
+       uses: actions/upload-artifact@v1
+       with:
+        name: screenshots
+        path: ./cypress/screenshots
      - name: generate reports
        if: always()
        run: npm run generatereport
@@ -26,4 +32,5 @@ jobs:
        with:
         name: test-results
         path: ./mochawesome-report
+     
        
