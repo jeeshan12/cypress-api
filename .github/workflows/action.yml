@@ -25,5 +25,5 @@ jobs:
        uses: actions/upload-artifact@v1
        with:
         name: test-results
-        path: cypress-api/mochawesome-report
+        path: ./mochawesome-report
        
