@@ -1,0 +1,7 @@
+site_name: Cypress API Docs
+site_description: 'Cypress API Automation for GraphQL and REST API'
+site_author: 'Mohd Jeeshan'
+nav:
+  - Home: README.md
+theme: 
+ name: 'material'
