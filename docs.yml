@@ -1,0 +1,4 @@
+site_name: Cypress API Docs
+nav:
+  - Home: README.md
+theme: Cypress API Automation
