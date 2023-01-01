@@ -16,5 +16,8 @@ jobs:
      - run: npm ci
        name: installing deps
      - name: running tests
-       run: npm run test:ci
+       run: npm run test:ci --  --reporter mochawesome --reporter-options reportDir="cypress/results",overwrite=false,html=false,json=true
+     - name: generate reports
+       if: always()
+       run: npm run generatereport
        
