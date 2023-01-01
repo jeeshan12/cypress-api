@@ -26,4 +26,15 @@ jobs:
        with:
         name: test-results
         path: ./mochawesome-report
+  docs:
+    runs-on: ubuntu-latest
+    needs: buildTest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Deploy docs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CONFIG_FILE: README.md
        
