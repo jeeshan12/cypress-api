@@ -33,6 +33,9 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
+        with:
+          node-version: '16.x'
+          cache: npm
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
         env:
