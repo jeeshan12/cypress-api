@@ -8,7 +8,7 @@
     "pretest": "node reportsetup.js",
     "test": "cypress run",
     "generatereport": "npx mochawesome-merge 'cypress/results/*.json' > mochawesome.json",
-    "postgeneratereport": "npx marge ./cypress/results/mochawesome.json",
+    "postgeneratereport": "npx marge mochawesome.json",
     "test:ci": "cypress run"
   },
   "keywords": [
