@@ -8,7 +8,7 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
 
-##### `A boilerplate framework that helps you to write automation tests for REST API and GraphQL.`
+##### `A boilerplate framework that helps you to write automation test for REST API and GraphQL.`
 
 
 
